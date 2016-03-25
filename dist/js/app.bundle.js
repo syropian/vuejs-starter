@@ -15088,7 +15088,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 var user = function user(state) {
-  console.log("Sup");
   return state.user.user;
 };
 exports.user = user;
