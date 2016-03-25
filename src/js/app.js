@@ -6,6 +6,7 @@ import Main from "./components/main.vue";
 
 Vue.use(VueResource);
 Vue.use(VueRouter);
+Vue.config.debug = true;
 
 const router = new VueRouter({
   hashbang: false,
@@ -13,14 +14,10 @@ const router = new VueRouter({
 });
 
 router.map({
-  // "/auth": {
-  //   name: "auth",
-  //   component: Auth
-  // },
-  // "/dashboard": {
-  //   name: "dashboard",
-  //   component: Dashboard,
-  // }
+  "/": {
+    name: "main",
+    component: Main
+  }
 });
 
 router.start(App, '#app')
