@@ -1,0 +1,22 @@
+{
+  "name": "VueJS-Starter",
+  "private": true,
+  "dependencies": {
+    "vue": "^1.0.19",
+    "vue-resource": "^0.6.1",
+    "vue-router": "^0.7.8",
+    "vuex": "^0.6.2"
+  },
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babelify": "^6.3.0",
+    "browserify": "^13.0.0",
+    "gulp": "^3.9.0",
+    "gulp-notify": "^2.2.0",
+    "gulp-sass": "^2.1.1",
+    "node-bourbon": "^4.2.3",
+    "vinyl-source-stream": "^1.1.0",
+    "vueify": "^8.3.2",
+    "watchify": "^3.7.0"
+  }
+}
