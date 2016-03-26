@@ -3,6 +3,9 @@
     "browser": true,
     "node": true
   },
+  "plugins": [
+    "vue"
+  ],
   "ecmaFeatures": {
     "arrowFunctions": true,
     "destructuring": true,
