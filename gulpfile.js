@@ -33,7 +33,9 @@ function scripts(watch){
   bundler.transform(babelify.configure({
     extensions: [".js"]
   }));
-  bundler.transform(vueify);
+  bundler
+  .transform(vueify)
+  .plugin("vueify-extract-css", { out: "./dist/css/app.bundle.css" });
 
   rebundle = function() {
     var stream = bundler.bundle();

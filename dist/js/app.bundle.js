@@ -15031,7 +15031,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"./../store/store":"/Users/user/Sites/vuejs-starter/src/js/store/store.js","vue":"/Users/user/Sites/vuejs-starter/node_modules/vue/dist/vue.common.js","vue-hot-reload-api":"/Users/user/Sites/vuejs-starter/node_modules/vue-hot-reload-api/index.js"}],"/Users/user/Sites/vuejs-starter/src/js/components/main.vue":[function(require,module,exports){
-var __vueify_style__ = require("vueify-insert-css").insert(".foo {\n  height: 200px;\n  width: 200px;\n  background: #70CAB4;\n  border: 1px solid #fff;\n  color: #fff;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  outline: 1px solid #70CAB4;\n  margin: 20px; }\n")
+var __vueify_style__ = 0
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
