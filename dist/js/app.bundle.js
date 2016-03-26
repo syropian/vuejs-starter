@@ -14360,7 +14360,27 @@ if (config.devtools) {
 
 module.exports = Vue;
 }).call(this,require('_process'),typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"_process":"/Users/user/Sites/vuejs-starter/node_modules/browserify/node_modules/process/browser.js"}],"/Users/user/Sites/vuejs-starter/node_modules/vuex/dist/vuex.js":[function(require,module,exports){
+},{"_process":"/Users/user/Sites/vuejs-starter/node_modules/browserify/node_modules/process/browser.js"}],"/Users/user/Sites/vuejs-starter/node_modules/vueify-insert-css/index.js":[function(require,module,exports){
+var inserted = exports.cache = {}
+
+exports.insert = function (css) {
+  if (inserted[css]) return
+  inserted[css] = true
+
+  var elem = document.createElement('style')
+  elem.setAttribute('type', 'text/css')
+
+  if ('textContent' in elem) {
+    elem.textContent = css
+  } else {
+    elem.styleSheet.cssText = css
+  }
+
+  document.getElementsByTagName('head')[0].appendChild(elem)
+  return elem
+}
+
+},{}],"/Users/user/Sites/vuejs-starter/node_modules/vuex/dist/vuex.js":[function(require,module,exports){
 /*!
  * Vuex v0.6.2
  * (c) 2016 Evan You
@@ -15011,6 +15031,7 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"./../store/store":"/Users/user/Sites/vuejs-starter/src/js/store/store.js","vue":"/Users/user/Sites/vuejs-starter/node_modules/vue/dist/vue.common.js","vue-hot-reload-api":"/Users/user/Sites/vuejs-starter/node_modules/vue-hot-reload-api/index.js"}],"/Users/user/Sites/vuejs-starter/src/js/components/main.vue":[function(require,module,exports){
+var __vueify_style__ = require("vueify-insert-css").insert(".foo {\n  height: 200px;\n  width: 200px;\n  background: #70CAB4;\n  border: 1px solid #fff;\n  color: #fff;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  outline: 1px solid #70CAB4;\n  margin: 20px; }\n")
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -15033,19 +15054,23 @@ exports.default = {
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div>\n  <h3>Hi {{ user.name }}</h3>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"foo\">\n  <h3>Hi {{ user.name }}</h3>\n</div>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   var id = "/Users/user/Sites/vuejs-starter/src/js/components/main.vue"
+  module.hot.dispose(function () {
+    require("vueify-insert-css").cache[".foo {\n  height: 200px;\n  width: 200px;\n  background: #70CAB4;\n  border: 1px solid #fff;\n  color: #fff;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  outline: 1px solid #70CAB4;\n  margin: 20px; }\n"] = false
+    document.head.removeChild(__vueify_style__)
+  })
   if (!module.hot.data) {
     hotAPI.createRecord(id, module.exports)
   } else {
     hotAPI.update(id, module.exports, (typeof module.exports === "function" ? module.exports.options : module.exports).template)
   }
 })()}
-},{"../store/actions":"/Users/user/Sites/vuejs-starter/src/js/store/actions.js","../store/getters":"/Users/user/Sites/vuejs-starter/src/js/store/getters.js","vue":"/Users/user/Sites/vuejs-starter/node_modules/vue/dist/vue.common.js","vue-hot-reload-api":"/Users/user/Sites/vuejs-starter/node_modules/vue-hot-reload-api/index.js"}],"/Users/user/Sites/vuejs-starter/src/js/store/actions.js":[function(require,module,exports){
+},{"../store/actions":"/Users/user/Sites/vuejs-starter/src/js/store/actions.js","../store/getters":"/Users/user/Sites/vuejs-starter/src/js/store/getters.js","vue":"/Users/user/Sites/vuejs-starter/node_modules/vue/dist/vue.common.js","vue-hot-reload-api":"/Users/user/Sites/vuejs-starter/node_modules/vue-hot-reload-api/index.js","vueify-insert-css":"/Users/user/Sites/vuejs-starter/node_modules/vueify-insert-css/index.js"}],"/Users/user/Sites/vuejs-starter/src/js/store/actions.js":[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
