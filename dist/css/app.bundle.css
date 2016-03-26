@@ -1,4 +1,4 @@
-.foo {
+.name-container {
   height: 200px;
   width: 200px;
   background: #70CAB4;
@@ -18,4 +18,8 @@
           justify-content: center;
   font-family: "Helvetica Neue", "Helvetica", "Arial", sans-serif;
   outline: 1px solid #70CAB4;
-  margin: 20px; }
+  margin: 20px;
+  padding: 20px; }
+
+button {
+  margin-left: 20px; }

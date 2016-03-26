@@ -4,7 +4,10 @@ import {
 
 const state  = {
   user: {
-    name: "Jane Doe"
+    name: "Tessa",
+    surname: "Martin",
+    gender: "female",
+    region: "Canada"
   },
 }
 

@@ -15051,17 +15051,22 @@ exports.default = {
     actions: {
       fetchUser: _actions.fetchUser
     }
+  },
+  computed: {
+    fullName: function fullName() {
+      return this.user.name + " " + this.user.surname;
+    }
   }
 };
 if (module.exports.__esModule) module.exports = module.exports.default
-;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"foo\">\n  <h3>Hi {{ user.name }}</h3>\n</div>\n"
+;(typeof module.exports === "function"? module.exports.options: module.exports).template = "\n<div class=\"name-container\">\n  <h3>Hi {{ fullName }}</h3>\n</div>\n<button @click=\"fetchUser\">Generate New Name</button>\n"
 if (module.hot) {(function () {  module.hot.accept()
   var hotAPI = require("vue-hot-reload-api")
   hotAPI.install(require("vue"), true)
   if (!hotAPI.compatible) return
   var id = "/Users/user/Sites/vuejs-starter/src/js/components/main.vue"
   module.hot.dispose(function () {
-    require("vueify-insert-css").cache[".foo {\n  height: 200px;\n  width: 200px;\n  background: #70CAB4;\n  border: 1px solid #fff;\n  color: #fff;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  outline: 1px solid #70CAB4;\n  margin: 20px; }\n"] = false
+    require("vueify-insert-css").cache[".name-container {\n  height: 200px;\n  width: 200px;\n  background: #70CAB4;\n  border: 1px solid #fff;\n  color: #fff;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -ms-flexbox;\n  display: flex;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n      -ms-flex-align: center;\n          align-items: center;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n      -ms-flex-pack: center;\n          justify-content: center;\n  font-family: \"Helvetica Neue\", \"Helvetica\", \"Arial\", sans-serif;\n  outline: 1px solid #70CAB4;\n  margin: 20px;\n  padding: 20px; }\n\nbutton {\n  margin-left: 20px; }\n"] = false
     document.head.removeChild(__vueify_style__)
   })
   if (!module.hot.data) {
@@ -15100,8 +15105,8 @@ var fetchUser = function fetchUser(_ref) {
   var dispatch = _ref.dispatch;
   var state = _ref.state;
 
-  _vue2["default"].http.get("/api/auth/user").then(function (response) {
-    dispatch(types.SET_USER, response.data.user);
+  _vue2["default"].http.get("http://api.uinames.com/?country=canada").then(function (response) {
+    dispatch(types.SET_USER, response.data);
   });
 };
 exports.fetchUser = fetchUser;
@@ -15130,7 +15135,10 @@ var _mutationTypes = require("../mutation-types");
 
 var state = {
   user: {
-    name: "Jane Doe"
+    name: "Tessa",
+    surname: "Martin",
+    gender: "female",
+    region: "Canada"
   }
 };
 

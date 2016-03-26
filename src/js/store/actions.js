@@ -6,7 +6,7 @@ Vue.use(VueResource);
 
 //User
 export const fetchUser = ({ dispatch, state }) => {
-  Vue.http.get("/api/auth/user").then( (response) => {
-    dispatch(types.SET_USER, response.data.user);
+  Vue.http.get("http://api.uinames.com/?country=canada").then( (response) => {
+    dispatch(types.SET_USER, response.data);
   });
 };
