@@ -1,3 +1,4 @@
 /node_modules
+/maps
 .sass-cache
 .DS_Store
