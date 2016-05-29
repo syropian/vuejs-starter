@@ -6,7 +6,7 @@ var Server = require("karma").Server;
 elixir(function(mix) {
     mix
     .browserify("./src/js/app.js", "./dist/js/app.bundle.js")
-    .sass("./src/sass/app.scss", null, { includePaths: require("node-bourbon").includePaths, quiet: true});
+    .sass("./src/sass/app.scss", "./dist/css/app.css", { includePaths: require("node-bourbon").includePaths, quiet: true});
 });
 
 gulp.task("test", function (done) {

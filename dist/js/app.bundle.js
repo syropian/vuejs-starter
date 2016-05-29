@@ -15293,25 +15293,25 @@ module.exports = Vue;
 
 }));
 },{}],30:[function(require,module,exports){
-'use strict';
+"use strict";
 
-var _vue = require('vue');
+var _vue = require("vue");
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vueRouter = require('vue-router');
+var _vueRouter = require("vue-router");
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _vueResource = require('vue-resource');
+var _vueResource = require("vue-resource");
 
 var _vueResource2 = _interopRequireDefault(_vueResource);
 
-var _app = require('./components/app.vue');
+var _app = require("./components/app.vue");
 
 var _app2 = _interopRequireDefault(_app);
 
-var _main = require('./components/main.vue');
+var _main = require("./components/main.vue");
 
 var _main2 = _interopRequireDefault(_main);
 
@@ -15327,13 +15327,13 @@ var router = new _vueRouter2.default({
 });
 
 router.map({
-  '/': {
-    name: 'main',
+  "/": {
+    name: "main",
     component: _main2.default
   }
 });
 
-router.start(_app2.default, '#app');
+router.start(_app2.default, "#app");
 
 },{"./components/app.vue":31,"./components/main.vue":32,"vue":28,"vue-resource":16,"vue-router":27}],31:[function(require,module,exports){
 "use strict";
@@ -15388,7 +15388,7 @@ exports.default = {
   },
   computed: {
     fullName: function fullName() {
-      return this.user.name + " " + this.user.surname;
+      return undefined.user.name + " " + undefined.user.surname;
     }
   }
 };
@@ -15406,22 +15406,22 @@ if (module.hot) {(function () {  module.hot.accept()
   }
 })()}
 },{"../store/actions":33,"../store/getters":34,"vue":28,"vue-hot-reload-api":2}],33:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.fetchUser = undefined;
 
-var _vue = require('vue');
+var _vue = require("vue");
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vueResource = require('vue-resource');
+var _vueResource = require("vue-resource");
 
 var _vueResource2 = _interopRequireDefault(_vueResource);
 
-var _mutationTypes = require('./mutation-types.js');
+var _mutationTypes = require("./mutation-types.js");
 
 var types = _interopRequireWildcard(_mutationTypes);
 
@@ -15436,7 +15436,7 @@ var fetchUser = exports.fetchUser = function fetchUser(_ref) {
   var dispatch = _ref.dispatch;
   var state = _ref.state;
 
-  _vue2.default.http.get('http://api.uinames.com/?country=canada').then(function (response) {
+  _vue2.default.http.get("http://api.uinames.com/?country=canada").then(function (response) {
     dispatch(types.SET_USER, response.data);
   });
 };
@@ -15452,26 +15452,27 @@ var user = exports.user = function user(state) {
 };
 
 },{}],35:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.mutations = undefined;
 
-var _mutationTypes = require('../mutation-types');
+var _mutationTypes = require("../mutation-types");
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 var state = {
   user: {
-    name: 'Tessa',
-    surname: 'Martin',
-    gender: 'female',
-    region: 'Canada'
+    name: "Tessa",
+    surname: "Martin",
+    gender: "female",
+    region: "Canada"
   }
 };
 
-var mutations = _defineProperty({}, _mutationTypes.SET_USER, function (state, user) {
+var mutations = exports.mutations = _defineProperty({}, _mutationTypes.SET_USER, function (state, user) {
   state.user = user;
 });
 
@@ -15481,30 +15482,30 @@ exports.default = {
 };
 
 },{"../mutation-types":36}],36:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 // User
-var SET_USER = exports.SET_USER = 'SET_USER';
+var SET_USER = exports.SET_USER = "SET_USER";
 
 },{}],37:[function(require,module,exports){
-'use strict';
+"use strict";
 
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _vue = require('vue');
+var _vue = require("vue");
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vuex = require('vuex');
+var _vuex = require("vuex");
 
 var _vuex2 = _interopRequireDefault(_vuex);
 
-var _user = require('./modules/user');
+var _user = require("./modules/user");
 
 var _user2 = _interopRequireDefault(_user);
 
