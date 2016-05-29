@@ -1,6 +1,6 @@
 import App from "../../src/js/components/app.vue";
 
-describe("App Component", function () {
+describe("App Component", () => {
   it("should have a name", () => {
     expect(App.name).toBe("App");
   });
