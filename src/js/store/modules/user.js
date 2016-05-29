@@ -1,19 +1,19 @@
 import {
   SET_USER
-} from "../mutation-types";
+} from "../mutation-types"
 
-const state  = {
+const state = {
   user: {
     name: "Tessa",
     surname: "Martin",
     gender: "female",
     region: "Canada"
-  },
+  }
 }
 
 const mutations = {
   [SET_USER] (state, user) {
-    state.user = user;
+    state.user = user
   }
 }
 

@@ -1,6 +1,22 @@
 {
   "name": "VueJS-Starter",
-  "private": true,
+  "version": "1.0.0",
+  "author": "Collin Henderson <collin@syropia.net>",
+  "description": "A starting point for VueJS using ES6, Browserify, Vuex, and Bourbon",
+  "keywords": [
+    "vue",
+    "starter",
+    "boilerplate"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/syropian/vuejs-starter.git"
+  },
+  "main": "dist/app.bundle.js",
+  "scripts": {
+    "lint": "eslint --ext .js,.vue src"
+  },
   "dependencies": {
     "vue": "^1.0.19",
     "vue-resource": "^0.6.1",
@@ -8,23 +24,14 @@
     "vuex": "^0.6.2"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
-    "babelify": "^6.3.0",
-    "browserify": "^13.0.0",
-    "eslint": "^2.5.1",
-    "eslint-plugin-vue": "^0.1.0",
+    "eslint": "^2.11.0",
+    "eslint-config-vue": "^1.0.3",
+    "eslint-plugin-html": "^1.5.1",
+    "eslint-plugin-vue": "^0.1.1",
     "gulp": "^3.9.0",
-    "gulp-notify": "^2.2.0",
-    "gulp-sass": "^2.1.1",
-    "gulp-sourcemaps": "^1.6.0",
-    "gulp-uglify": "^1.5.3",
-    "lodash": "^4.9.0",
+    "laravel-elixir": "^6.0.0-2",
+    "laravel-elixir-vueify": "^1.0.3",
     "node-bourbon": "^4.2.3",
-    "node-sass": "^3.4.2",
-    "vinyl-buffer": "^1.0.0",
-    "vinyl-source-stream": "^1.1.0",
-    "vueify": "^8.3.2",
-    "vueify-extract-css": "^0.1.0",
-    "watchify": "^3.7.0"
+    "stream-browserify": "^2.0.1"
   }
 }

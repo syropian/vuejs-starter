@@ -1,12 +1,12 @@
-import Vue from "vue";
-import VueResource from "vue-resource";
-import * as types from "./mutation-types.js";
+import Vue from "vue"
+import VueResource from "vue-resource"
+import * as types from "./mutation-types.js"
 
-Vue.use(VueResource);
+Vue.use(VueResource)
 
-//User
+// User
 export const fetchUser = ({ dispatch, state }) => {
-  Vue.http.get("http://api.uinames.com/?country=canada").then( (response) => {
-    dispatch(types.SET_USER, response.data);
-  });
-};
+  Vue.http.get("http://api.uinames.com/?country=canada").then((response) => {
+    dispatch(types.SET_USER, response.data)
+  })
+}
