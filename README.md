@@ -1,5 +1,10 @@
-# VueJS Starter
+# VueJS Starter [Deprecated]
+
+> **Note:** This boilerplate is now deprecated. I recommend using [vue-cli](https://github.com/vuejs/vue-cli) to bootstrap your Vue.js projects.
+
 A starting point for VueJS using ES6, Browserify, Vuex, and Bourbon. Also includes linting using ESLint, and tests powered by Jasmine, Karma, and PhantomJS.
+
+
 
 ### Tasks
 ---
